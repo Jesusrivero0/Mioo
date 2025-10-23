@@ -9,25 +9,24 @@ public class Ejercicio12 {
 
 		Scanner scanner = new Scanner(System.in);
 		String cad1;
-		String cad2;
 		Integer comparar;
+		String[] arrayPalabra;
 		do {
 			System.out.println("Indica una cadena");
 			cad1 = scanner.nextLine();
-			String[] arrayPalabra = cad1.split(" ");
-			System.out.println("Indica otra cadena");
-			cad2 = scanner.nextLine();
-			comparar = cad1.compareTo(cad2);
+			 arrayPalabra = cad1.split(" ");
+			comparar = arrayPalabra[0].compareTo(arrayPalabra[1]);
 
-		} while (cad1.trim().equals(cad2.trim()) || cad1.isEmpty() || cad2.isEmpty());
+		} while (arrayPalabra[0].trim().equals(arrayPalabra[1].trim()) || arrayPalabra[0].isEmpty() || arrayPalabra[1].isEmpty());
 		if (comparar < 0) {
-			System.out.println(cad1);
-			System.out.println(cad2);
+			System.out.println(arrayPalabra[0]);
+			System.out.println(arrayPalabra[1]);
 		} else if (comparar > 0) {
-			System.out.println(cad2);
-			System.out.println(cad1);
+			System.out.println(arrayPalabra[1]);
+			System.out.println(arrayPalabra[0]);
 		} else {
 			System.out.println("Son iguales");
+			
 		}
 		scanner.close();
 	}
